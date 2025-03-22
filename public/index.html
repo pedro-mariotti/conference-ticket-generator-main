@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="shortcut icon"
+      href="./assets/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Conference ticket generator</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <img src="./assets/logo-mark.svg" alt="" />
+        <h1>Coding Conf</h1>
+      </header>
+      <form id="user-form" action="">
+        <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+        <h4>Secure your spot at next year's biggest coding conference.</h4>
+        <div class="pfp">
+          <p>Upload Avatar</p>
+          <div class="dragdrop">
+            <div id="unfilled-pfp">
+              <img src="./assets/icon-upload.svg" alt="upload image icon" />
+              <p>Drag and drop or click to upload</p>
+              <input
+                class="pfp-upload"
+                id="pfp-upload"
+                type="file"
+                name="profilepic"
+              />
+            </div>
+            <div class="filled-pfp" id="filled-pfp" style="display: none">
+              <img
+                id="pfp-temp-image"
+                src="./assets/image-avatar.jpg"
+                alt="profile picture"
+              />
+              <div>
+                <button type="button" id="remove-pfp">Remove image</button>
+                <button type="button" id="change-pfp">Change image</button>
+              </div>
+            </div>
+          </div>
+          <div class="dragdrop-info">
+            <img src="./assets/icon-info.svg" alt="information icon" />
+            <p>Upload your photo (JPG or PNG, max size: 500KB).</p>
+          </div>
+        </div>
+        <label
+          >Full Name
+          <input type="text" placeholder="John Doe" name="nome" required
+        /></label>
+        <label
+          >Email Address
+          <input
+            type="email"
+            placeholder="example@email.com"
+            name="email"
+            required
+        /></label>
+        <label
+          >Github Username
+          <input type="text" placeholder="@yourusername" required name="github"
+        /></label>
+        <input class="submit-button" type="submit" value="Generate My Ticket" />
+      </form>
+      <div id="ticket-section" class="ticket-section">
+        <h1>
+          Congrats,<span class="text-user-name" id="text-user-name-title"
+            >[NOME]</span
+          >! Your ticket is ready.
+        </h1>
+        <h2>
+          We've emailed your ticket to <span id="text-email">[EMAIL]</span> and
+          will send updates in the run up to the event.
+        </h2>
+        <div class="ticket-container">
+          <div class="ticket-header">
+            <img src="./assets/logo-mark.svg" alt="logo" />
+            <div class="ticket-title">
+              <h3 id="h3-teimoso">Coding Conf</h3>
+              <p>Jan 31, 2025 / Austin, TX</p>
+            </div>
+          </div>
+          <div class="ticket-user">
+            <img
+              class="ticket-avatar"
+              id="ticket-avatar"
+              src="./assets/image-avatar.jpg"
+              alt="avatar"
+            />
+            <div class="ticket-user-info">
+              <p class="text-user-name">[NOME]</p>
+              <div class="ticket-github">
+                <img
+                  src="./assets/icon-github.svg"
+                  alt="github icon"
+                  id="ticket-user-image"
+                />
+                <p id="text-github">[USER]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Pedro Mariotti</a>.
+    </footer>
+    <img
+      src="./assets/pattern-squiggly-line-bottom-desktop.svg"
+      alt="background squiggly lines"
+      id="bg-img-1"
+      class="bg-img"
+    />
+    <img
+      src="./assets/pattern-squiggly-line-top.svg"
+      alt="background squiggly lines"
+      id="bg-img-2"
+      class="bg-img"
+    />
+    <img
+      src="./assets/pattern-lines.svg"
+      alt="background squiggly lines"
+      id="bg-img-3"
+      class="bg-img"
+    />
+    <img
+      src="./assets/pattern-circle.svg"
+      alt="background squiggly lines"
+      id="bg-img-4"
+      class="bg-img"
+    />
+    <img
+      src="./assets/pattern-circle.svg"
+      alt="background squiggly lines"
+      id="bg-img-5"
+      class="bg-img"
+    />
+    <img
+      src="./assets/pattern-squiggly-line-bottom-mobile-tablet.svg"
+      alt="background squiggly lines"
+      id="bg-img-mobile"
+      class="bg-img"
+    />
+    <script src="index.js"></script>
+  </body>
+</html>

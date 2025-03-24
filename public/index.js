@@ -16,6 +16,13 @@ var userName = null;
 var userMail = null;
 var userGithub = null;
 
+userImageInput.onchange = function() {
+  if(this.files[0].size > 200000) {
+     alert("File is too big!");
+     this.value = "";
+  }
+};
+
 userForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const formData = new FormData(userForm);
@@ -41,6 +48,7 @@ userForm.addEventListener("submit", (e) => {
   document.getElementById("text-email").innerText = userMail;
   document.getElementById("text-github").innerText = userGithub;
 });
+
 userImageInput.onchange = (e) => {
   filesPfp = e.target.files;
   const reader = new FileReader();
@@ -58,6 +66,7 @@ userImageInput.onchange = (e) => {
     unfilledUserImageInputDiv.style.display = "block";
   }
 };
+
 removePfpButton.onclick = () => {
   pfpTempImage.src = "";
   console.log(userImageInput.value);
@@ -65,6 +74,7 @@ removePfpButton.onclick = () => {
   unfilledUserImageInputDiv.style.display = "block";
   filledUserImageInputDiv.style.display = "none";
 };
+
 document.getElementById("change-pfp").addEventListener("click", () => {
   userImageInput.click();
 });

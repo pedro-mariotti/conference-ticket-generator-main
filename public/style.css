@@ -12,8 +12,8 @@ header {
 body {
   position: relative;
   width: 100vw;
-  height: 100vh;
-  max-height: max-content;
+  min-height: 100vh;
+  max-height: fit-content;
   display: flex;
   align-items: center;
   flex-direction: column;

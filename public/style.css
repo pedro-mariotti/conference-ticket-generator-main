@@ -97,6 +97,9 @@ input::selection {
   padding-bottom: 3rem;
   text-align: center;
 }
+.dragdrop:hover {
+  background-color: hsla(252, 11%, 91%, 0.199);
+}
 .dragdrop-info {
   gap: 2px;
   display: flex;
@@ -156,6 +159,7 @@ input::selection {
   top: 0;
   left: 0;
   height: 100%;
+  width: 100%;
   background: none;
   opacity: 0;
   pointer-events: auto;
